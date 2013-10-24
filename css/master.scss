@@ -1,0 +1,20 @@
+html{
+	font-family: 'Roboto Slab', serif;
+}
+
+h1{
+	font-family: 'Anton', sans-serif;
+}
+
+a{
+	text-decoration: none;
+	color: #557AF2;
+
+	&:hover{
+		color: #1649F2;
+	}
+}
+
+ul{
+	list-style: none;
+}

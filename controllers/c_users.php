@@ -35,11 +35,13 @@ class users_controller extends base_controller {
         Router::redirect('/users/login');
     }
 
-    public function login() {
+    public function login($error = NULL) {
 
         # setup view & title
         $this->template->content = View::instance('v_users_login');
         $this->template->title = 'Log In';
+        # pass data to view
+        $this->template->content->error = $error;
         # render view
         echo $this->template;
     }
@@ -63,13 +65,13 @@ class users_controller extends base_controller {
         # success: store cookie and send to landing page
         if($token) {
 
-            setcookie('token', $token, strtotime('+1 year'), '/');
+            setcookie('token', $token, strtotime('+2 weeks'), '/');
             Router::redirect("/users/profile/");
         }
 
         # fail: send back to login page
         else {
-            Router::redirect("/users/login/");
+            Router::redirect("/users/login/error");
         }
     }
 
@@ -98,8 +100,8 @@ class users_controller extends base_controller {
         $this->template->title = $this->user->first_name."'s Profile";
 
         # add css and js docs
-        $client_files_head = Array('/css/profile.css','/css/master.css');
-        $client_files_body = Array('/js/profile.js');
+        #$client_files_head = Array('/css/profile.css','/css/master.css');
+        #$client_files_body = Array('/js/profile.js');
 
         # pass the data to the view
         $this->template->content->user_name = $user_name;
