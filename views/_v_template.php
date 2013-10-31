@@ -12,6 +12,7 @@
 	
 </head>
 <header>
+<div id="logo"><a href="/index">CARING CODERS</a></div>
 <nav>
 	<ul>
 		<li>Topic 1</li>

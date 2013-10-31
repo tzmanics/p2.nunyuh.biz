@@ -7,5 +7,10 @@
 	Password <input type='password' name='password'><br>
 
 	<input type='submit' value='Sign Up'>
+	<input type='hidden' name='timezone'>
+
+	<script>
+    $('input[name=timezone]').val(jstz.determine().name());
+	</script>
 
 </form>

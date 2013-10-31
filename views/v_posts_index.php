@@ -1,9 +1,9 @@
 <?php foreach($posts as $post): ?>
 
 <article>
-	<h1><?=$post['first_name']?> <?=$post['last_name']?> posted:</h1>
+	<h2><?=$post['first_name']?> <?=$post['last_name']?> posted:</h2>
 	<p><?=$post['content']?></p>
-	<time datetime="<?=Time::display($post['created'],'Y-m-d G:i')?>">
+	<time datetime="<?=Time::display($post['created'],'d M y G:i')?>">
 		<?=Time::display($post['created'])?>
 	</time>
 </article>
