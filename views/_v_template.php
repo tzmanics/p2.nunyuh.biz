@@ -4,7 +4,6 @@
 	<title><?php if(isset($title)) echo $title; ?></title>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
-	<link href='http://fonts.googleapis.com/css?family=Anton|Roboto+Slab' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" href="css/master.css">
 					
 	<!-- Controller Specific JS/CSS -->
@@ -12,16 +11,16 @@
 	
 </head>
 <header>
-<div id="logo"><a href="/index">CARING CODERS</a></div>
-<nav>
-	<ul>
-		<li>Topic 1</li>
-		<li>Topic 2</li>
-		<li>Topic 3</li>
-		<li>Welcome, <?php if($user) {echo $user->first_name;
-			} else {echo '<a href="/users/login">Log in?</a>';}?></li>
-	</ul>
-</nav>
+	<div id="logo"><h2><a href="/index"><img src="images/caringCodersLogo.png"></a></h2></div>
+	<nav>
+		<ul>
+			<li><a href="/posts/add">Ask</a></li>
+			<li><a href="/posts/posts">Read</a></li>
+			<li><a href="/users/profile">Profile</a></li>
+			<li>Hi, <?php if($user) {echo $user->first_name;
+				} else {echo '<a href="/users/login">Log in?</a>';}?></li>
+		</ul>
+	</nav>
 </header>
 
 <body>	
