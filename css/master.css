@@ -31,11 +31,16 @@ body {
   font-family: 'Oxygen', serif;
   color: #666666;
   background: linear-gradient(45deg, #cbfff5, white);
-  background: -webkit-linear-gradient(45deg, #cbfff5, white);
-  background: -moz-linear-gradient(45deg, #cbfff5, white); }
+  background: -webkit-llinear-gradient(45deg, #cbfff5, white);
+  background: -webkit-llinear-gradient(45deg, #cbfff5, white); }
 
 h1 {
-  font-weight: 700; }
+  font-weight: 300;
+  font-size: 1.5em; }
+
+h2 {
+  margin: 18px;
+  font-size: 1.25em; }
 
 a {
   text-decoration: none;
@@ -44,7 +49,9 @@ a {
     color: #1649F2; }
 
 nav {
-  background-color: white;
+  background: linear-gradient(45deg, white, #cbfff5);
+  background: -webkit-llinear-gradient(45deg, white, #cbfff5);
+  background: -webkit-llinear-gradient(45deg, white, #cbfff5);
   height: 27px;
   right: 0%; }
   nav ul {
@@ -57,3 +64,9 @@ nav {
 #welcome {
   margin: 0 auto;
   padding: 10px; }
+
+form {
+  margin: 20px 0 0 10px; }
+
+input {
+  border-radius: 10px; }
