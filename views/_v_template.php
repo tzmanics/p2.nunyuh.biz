@@ -2,9 +2,9 @@
 <html>
 <head>
 	<title><?php if(isset($title)) echo $title; ?></title>
-
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
 	<link rel="stylesheet" type="text/css" href="/css/master.css">
+	<script src="/js/jquery.js"></script>
 					
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
@@ -14,11 +14,17 @@
 	<div id="logo"><h2><a href="/index"><img src="https://dl.dropboxusercontent.com/u/3061181/caringCodersLogo.png"></a></h2></div>
 	<nav>
 		<ul>
-			<li>Hi, <?php if($user) {echo $user->first_name;
+			<li><?php if($user) {echo "<li class='userMenu'><a href='#'>
+					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'>
+					</a><ul><li><a href='/users/profile'>PROFILE</a></li>
+					<li><a href='/posts'>MY POSTS</a></li>
+					<li><a href='/posts/users'>FOLLOWING</a></li>
+					<li><a href='/users/logout'>LOG OUT</a></li></ul>
+					</li><li>Hi, ".$user->first_name;
 				} else {echo '<a href="/users/login">Log in?</a>';}?></li>
-			<li><a href="/posts/add">Ask</a></li>
-			<li><a href="/posts/posts">Read</a></li>
-			<li><a href="/users/profile">Profile</a></li>
+			<li><a href="/posts/posts">READ</a></li>
+			<li><a href="/posts/add">ASK</a></li>
+			<!---->
 			
 		</ul>
 	</nav>
@@ -29,6 +35,6 @@
 	<?php if(isset($content)) echo $content; ?>
 
 	<?php if(isset($client_files_body)) echo $client_files_body; ?>
-
+	<script type"text/javascript" src="/js/js.js"></script>
 </body>
 </html>

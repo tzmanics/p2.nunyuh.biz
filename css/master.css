@@ -28,6 +28,8 @@ table {
   border-spacing: 0; }
 
 body {
+  width: 722px;
+  margin: 0 auto;
   font-family: 'Oxygen', serif;
   color: #666666;
   background: linear-gradient(45deg, #cbfff5, white);
@@ -42,24 +44,54 @@ h2 {
   margin: 18px;
   font-size: 1.25em; }
 
+p {
+  transition: height .2s;
+  -webkit-transition: height .2s;
+  -moz-transition: height .2s; }
+
 a {
   text-decoration: none;
   color: #557AF2; }
   a:hover {
     color: #1649F2; }
 
+#logo {
+  height: 68px; }
+
 nav {
   background: linear-gradient(45deg, white, #cbfff5);
   background: -webkit-llinear-gradient(45deg, white, #cbfff5);
   background: -webkit-llinear-gradient(45deg, white, #cbfff5);
   height: 27px;
-  right: 0%; }
+  right: 0%;
+  border-radius: 10px 0 10px 0; }
   nav ul {
     list-style: none;
     padding: 5px 0 0 8px; }
   nav li {
     float: right;
-    margin-right: 18px; }
+    margin: 0 5px 0 15px; }
+
+.userMenu {
+  float: right;
+  margin-left: 0;
+  height: 22px;
+  width: 15px;
+  overflow: hidden; }
+
+.showMenu {
+  height: 120px;
+  width: 90px;
+  margin: 0;
+  background-color: #CBFFF5;
+  font-size: 11pt;
+  text-align: left; }
+  .showMenu ul {
+    margin: 0;
+    padding: 0; }
+  .showMenu li {
+    margin: 5px 3px;
+    padding: 0; }
 
 #welcome {
   margin: 0 auto;

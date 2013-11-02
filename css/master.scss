@@ -13,6 +13,8 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body {
+  width: 722px;
+  margin: 0 auto;
   font-family: 'Oxygen', serif;
   color: #666666; 
   @include lin-grad(45deg, #CBFFF5, white);
@@ -28,6 +30,12 @@ h2{
 	font-size: 1.25em;
 }
 
+p{
+	transition: height .2s;
+  	-webkit-transition: height .2s;
+  	-moz-transition: height .2s;
+}
+
 a{
 	text-decoration: none;
 	color: #557AF2;
@@ -36,11 +44,16 @@ a{
 		color: #1649F2;
 	}
 }
+#logo{
+	height: 68px;
+}
 
 nav{
 	@include lin-grad(45deg, white, #cbfff5);
 	height: 27px;
 	right: 0%;
+	border-radius: 10px 0 10px 0;
+
 
 	ul{
 		list-style: none;
@@ -48,10 +61,35 @@ nav{
 	}
 	li{
 	float: right;
-	margin-right: 18px;
+	margin: 0 5px 0 15px;
 	}
 }
 
+.userMenu{
+	float: right;
+	margin-left: 0;
+	height: 22px;
+	width: 15px;
+	overflow: hidden;
+}
+.showMenu{
+	height: 120px;
+	width: 90px;
+	margin: 0;
+	background-color: #CBFFF5;
+	font-size: 11pt;
+	text-align: left;
+		ul{
+			margin: 0;
+			padding: 0;
+		}
+
+		li{
+			margin:5px 3px;
+			padding: 0;
+		}
+}
+	
 #welcome{
 	margin: 0 auto;
 	padding: 10px;
