@@ -1,6 +1,10 @@
-<h1>Hi <?=$user->first_name?>!</h1>
+<h2>Hi <?=$user->first_name?>!</h2>
+<div id='userAvatar'>
+	<a href'#'><img src='/assets/img/default.jpg' alt='user avatar'></a>
+	<br><h3><a href='#'>Click to Change Picture</a></h3>
+</div>
 <div id='usersPosts'>
-	<h2>Your Posts</h2>
+	<h1>YOUR POSTS</h1>
 	<?php foreach($posts as $post): ?>
 		<article>
 			<p><?=$post['content']?></p>
@@ -12,4 +16,5 @@
 
 
 	<?php endforeach; ?>
+	<h2>Click <a href='/posts/add'>HERE</a> to add more Posts</h2>
 </div>

@@ -3,16 +3,17 @@
 <head>
 	<title><?php if(isset($title)) echo $title; ?></title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />	
-	<link rel="stylesheet" type="text/css" href="/css/master.css">
-	<script src="/js/jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="/assets/css/master.css">
+	<script src="/assets/js/jquery.js"></script>
 					
 	<!-- Controller Specific JS/CSS -->
 	<?php if(isset($client_files_head)) echo $client_files_head; ?>
 	
 </head>
+<body>
 <header>
-	<div id="logo"><h2><a href="/index"><img src="https://dl.dropboxusercontent.com/u/3061181/caringCodersLogo.png"></a></h2></div>
 	<nav>
+	<h1> <a href='/index'>CARING<img src='/assets/img/bitHeart.png' alt='8bit heart'>CODERS</a></h1>
 		<ul>
 			<li><?php if($user) {echo "<li class='userMenu'><a href='#'>
 					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'>
@@ -28,12 +29,10 @@
 		</ul>
 	</nav>
 </header>
-
-<body>	
-
-	<?php if(isset($content)) echo $content; ?>
-
-	<?php if(isset($client_files_body)) echo $client_files_body; ?>
-	<script type"text/javascript" src="/js/js.js"></script>
+	<div class='content'>
+		<?php if(isset($content)) echo $content; ?>
+		<?php if(isset($client_files_body)) echo $client_files_body; ?>
+	</div>
+	<script type"text/javascript" src="/assets/js/js.js"></script>
 </body>
 </html>
