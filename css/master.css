@@ -28,26 +28,27 @@ table {
   border-spacing: 0; }
 
 body {
-  width: 722px;
+  width: 70%;
+  min-width: 400px;
   margin: 0 auto;
   font-family: 'Oxygen', serif;
+  font-weight: 100;
   color: #666666;
   background: linear-gradient(45deg, #cbfff5, white);
   background: -webkit-llinear-gradient(45deg, #cbfff5, white);
   background: -webkit-llinear-gradient(45deg, #cbfff5, white); }
 
 h1 {
-  font-weight: 300;
-  font-size: 1.5em; }
+  font-weight: 500;
+  font-size: 1.5em;
+  margin: 10px 0; }
 
 h2 {
   margin: 18px;
   font-size: 1.25em; }
 
 p {
-  transition: height .2s;
-  -webkit-transition: height .2s;
-  -moz-transition: height .2s; }
+  margin: 10px 0; }
 
 a {
   text-decoration: none;
@@ -102,3 +103,12 @@ form {
 
 input {
   border-radius: 10px; }
+
+article {
+  background-color: white;
+  margin: 10px 0; }
+  article h2 {
+    margin: 4px 0; }
+
+time {
+  font-size: 9pt; }

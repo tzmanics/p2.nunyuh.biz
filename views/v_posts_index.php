@@ -1,3 +1,5 @@
+<h1>Click <a href='/posts/users'>HERE</a> to follow more Users</h1>
+
 <?php foreach($posts as $post): ?>
 
 <article>

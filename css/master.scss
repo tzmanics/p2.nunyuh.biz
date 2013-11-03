@@ -13,16 +13,19 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 
 
 body {
-  width: 722px;
+  width: 70%;
+  min-width: 400px;
   margin: 0 auto;
   font-family: 'Oxygen', serif;
+  font-weight: 100;
   color: #666666; 
   @include lin-grad(45deg, #CBFFF5, white);
   }
 
 h1{
-	font-weight: 300;
+	font-weight: 500;
 	font-size: 1.5em;
+	margin: 10px 0;
 }
 
 h2{
@@ -31,9 +34,7 @@ h2{
 }
 
 p{
-	transition: height .2s;
-  	-webkit-transition: height .2s;
-  	-moz-transition: height .2s;
+	margin: 10px 0;
 }
 
 a{
@@ -99,4 +100,18 @@ form{
 }
 input {
 	border-radius: 10px; 
+}
+
+article{
+	background-color: white;
+	margin: 10px 0;
+
+	h2{
+		margin: 4px 0;
+	}
+
+}
+
+time {
+	font-size: 9pt;
 }

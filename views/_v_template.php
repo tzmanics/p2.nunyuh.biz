@@ -22,7 +22,7 @@
 					<li><a href='/users/logout'>LOG OUT</a></li></ul>
 					</li><li>Hi, ".$user->first_name;
 				} else {echo '<a href="/users/login">Log in?</a>';}?></li>
-			<li><a href="/posts/posts">READ</a></li>
+			<li><a href="/posts">READ</a></li>
 			<li><a href="/posts/add">ASK</a></li>
 			<!---->
 			
