@@ -17,13 +17,12 @@
 			<li><?php if($user) {echo "<li class='userMenu'><a href='#'>
 					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'>
 					</a><ul><li><a href='/users/profile'>PROFILE</a></li>
-					<li><a href='/posts'>MY POSTS</a></li>
 					<li><a href='/posts/users'>FOLLOWING</a></li>
 					<li><a href='/users/logout'>LOG OUT</a></li></ul>
 					</li><li>Hi, ".$user->first_name;
 				} else {echo '<a href="/users/login">Log in?</a>';}?></li>
 			<li><a href="/posts">READ</a></li>
-			<li><a href="/posts/add">ASK</a></li>
+			<li><a href="/posts/add">POST</a></li>
 			<!---->
 			
 		</ul>

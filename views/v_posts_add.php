@@ -2,5 +2,5 @@
 	<label for = 'content'>New Post:</label><br>
 	<textarea name = 'content' id = 'content'></textarea>
 	<br><br>
-	<input type = 'Submit' value = 'New post'>
+	<input type = 'Submit' value = 'POST'>
 </form>

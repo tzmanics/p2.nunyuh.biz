@@ -106,12 +106,29 @@ class users_controller extends base_controller {
         # pass the data to the view
         $this->template->content->user_name = $user_name;
         # disaply view
-        echo $this->template;
+        
 
         #shorter  / DRY
         # $content = View::instnace('v_users_profile');
         # $content->user_name = $user_name;
         # $this->template-> = $content;
+
+        # SQL query
+        $q = "SELECT 
+                posts.content,
+                posts.created,
+                posts.post_id,
+                posts.user_id
+            FROM posts
+            WHERE user_id = ".$this->user->user_id;
+
+        # run query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        # pass data to view
+        $this->template->content->posts = $posts;
+
+        echo $this->template;
     }
 
 } # end of the class
