@@ -127,9 +127,11 @@ textarea{
 }
 
 article{
+	width: 98.5%;
 	margin: 20px 0;
 	padding: 5px;
 	background-color: rgba(230,84,60,.05); 
+	float: left;
 
 	img{
 		width:50px;
@@ -167,4 +169,36 @@ article{
 		padding:0 10px 10px 10px;
 		text-align: right;
 	}
+}
+
+#following{
+	width:45%;
+	float: left;
+	background-color: white;
+	border: 1px solid #CFCFCF;
+	margin-bottom: 20px;
+	padding: 10px;
+	h1{
+		padding:0 10px 10px 10px;
+		font-weight:500;
+		text-align: right;
+		border-bottom: 1px solid #CFCFCF;
+	}
+
+}
+
+#notFollowing{
+	width:45%;
+	float: right;
+	background-color: white;
+	border: 1px solid #CFCFCF;
+	margin-bottom:20px;
+	padding: 10px;
+	h1{
+		padding:0 10px 10px 10px;
+		font-weight:500;
+		text-align: left;
+		border-bottom: 1px solid #CFCFCF;
+	}
+
 }
