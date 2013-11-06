@@ -23,7 +23,6 @@ class users_controller extends base_controller {
 
     # user sign up
     public function p_signup() {
-
         $input_check = array();
 
         # check for email duplicates
@@ -37,8 +36,8 @@ class users_controller extends base_controller {
         else $invalid_email = false;
 
         # check for empty fields
-        foreach ($_POST as $key => $value) 
-            if ( strlen($value) < 1 )
+        $empty_field = false;
+        if(empty($_POST['first_name']) || empty($_POST['last_name']) || empty($_POST['password']) || empty($_POST['email']))
                 $empty_field = true;
 
 
@@ -56,7 +55,7 @@ class users_controller extends base_controller {
             $token = $_POST['token'];
             setcookie('token', $token, strtotime('+2 week'), '/');
             # send to login page
-            Router::redirect('/users/login');
+            Router::redirect('/users/profile');
         }
 
         else

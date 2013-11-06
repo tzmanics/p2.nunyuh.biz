@@ -2,8 +2,8 @@
 <h1> Welcome to Caring Coders! </h1>
 <p> We are here to help...</p>
 <br>
-<h2>This is my first step in developing a forum for people to ask questions and get answers.
-	My plan is to add moe function to each post that lets users tag thier questions.
+<h2>This is my first step in developing a forum for people to unabashedly ask beginner's or easy questions and get answers.
+	My plan is to add more function to each post that lets users tag thier questions.
 	I also plan to add a function to let other users reply to the questions.</h2><br>
 <h2>For now my +1 features are the option to upload an avatar and delete a post</h2><br>
 <h1>Thanks for stopping by!</h1>
