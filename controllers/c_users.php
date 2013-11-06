@@ -8,30 +8,60 @@ class users_controller extends base_controller {
     public function index() {
     }
 
-    public function signup() {
+    public function signup($email_exists = NULL, $invalid_email = NULL,  $empty_field = NULL) {
 
         # set up view & title
         $this->template->content = View::instance('v_users_signup');
         $this->template->title = 'Sign Up';
+        $this->template->content->email_exists = $email_exists;
+        $this->template->content->invalid_email = $invalid_email;
+        $this->template->content->empty_field = $empty_field;
 
         # render view
         echo $this->template;
     }
 
+    # user sign up
     public function p_signup() {
+
+        $input_check = array();
+
+        # check for email duplicates
+        $email_exists = DB::instance(DB_NAME)->select_field("SELECT email FROM users WHERE email = '".$_POST['email']."'");
+        if ($email_exists)
+            $email_exists = true;
+
+        # check for a valid email
+        if(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
+            $invalid_email = true;      
+        else $invalid_email = false;
+
+        # check for empty fields
+        foreach ($_POST as $key => $value) 
+            if ( strlen($value) < 1 )
+                $empty_field = true;
+
 
         # add time created 
         $_POST['created'] = Time::now();
 
         # encrypt password
         $_POST['password'] = sha1(PASSWORD_SALT.$_POST['password']);
-        $_POST['token'] = sha1(TOKE_SALT.$_POST['email'].Utils::generate_random_string());
+        $_POST['token'] = sha1(TOKEN_SALT.$_POST['email'].Utils::generate_random_string());
 
-        # insert form data into table
-        DB::instance(DB_NAME)->insert_row('users', $_POST);
+        if (!$email_exists && !$invalid_email && !$empty_field)
+        {
+            # insert form data into table
+            DB::instance(DB_NAME)->insert_row('users', $_POST);
+            $token = $_POST['token'];
+            setcookie('token', $token, strtotime('+2 week'), '/');
+            # send to login page
+            Router::redirect('/users/login');
+        }
 
-        # send to login page
-        Router::redirect('/users/login');
+        else
+            # show what errors occured
+            $this->signup($email_exists, $invalid_email, $empty_field);
     }
 
     public function login($error = NULL) {
@@ -125,7 +155,7 @@ class users_controller extends base_controller {
             # notify of error 
             if($avatar == 'Invalid file type.') {
                 Router::redirect("/users/avatarError");
-                        }
+            }
             else {
                 # add to DB                
                 $data = Array("avatar" => $avatar);
