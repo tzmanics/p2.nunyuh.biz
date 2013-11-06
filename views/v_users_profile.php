@@ -3,7 +3,7 @@
 
 
 <!-- get and display user name -->
-<h2>Hi <?=$user->first_name?>!</h2>
+<h1>Hi <?=$user->first_name?>!</h1>
 <div id='userAvatar'>
 	<!-- display default avatar until user uploads -->
 	<?= "<img src='/assets/img/avatars/".$avatar."'>"; ?>

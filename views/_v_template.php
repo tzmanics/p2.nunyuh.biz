@@ -19,12 +19,12 @@
 		<ul>
 			<!-- regular navigation + user menu nav-->
 			<li><?php if($user) {echo "<li class='userMenu'><a href='#'>
-					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'>
-					</a><ul><li><a href='/users/profile'>PROFILE</a></li>
+					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'></a>
+					<ul><li><a href='/users/profile'>PROFILE</a></li>
 					<li><a href='/posts/myPosts'>MY POSTS</a></li>
-					<li><a href='/users/logout'>LOG OUT</a></li></ul></li>
-
-					<li><a href ='/users/profile'>Hi, ".$user->first_name;
+					<li><a href='/users/logout'>LOG OUT</a></li>
+					</ul></li>
+				<li><a href ='/users/profile'>Hi, ".$user->first_name;
 				} else {echo '<a href="/users/login">Log in?</a>';}?></li>
 			<li><a href="/posts">FOLLOW</a></li>
 			<li><a href="/posts/add">POST</a></li>
