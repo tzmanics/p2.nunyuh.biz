@@ -101,14 +101,60 @@ class users_controller extends base_controller {
         # add css and js docs
         #$client_files_head = Array('/css/profile.css','/css/master.css');
         #$client_files_body = Array('/js/profile.js');
+        $q = "SELECT avatar 
+              FROM users
+              WHERE users.user_id = ".$this->user->user_id;
+
+        $avatar = DB::instance(DB_NAME)->select_field($q);
 
         # pass the data to the view
-        $this->template->content->user_name = $user_name;
-        # disaply view
+        $this->template->content->avatar = $avatar;
         
-
-
+        # disaply view
         echo $this->template;
+    }
+
+    # personalized avatars
+    public function p_avatarUpload(){
+         if ($_FILES["file"]["error"] == 0)
+        {
+            
+            # upload the user-chosen file and save to img file
+            $avatar = Upload::upload($_FILES, "/assets/img/avatars/", array("jpg", "JPG", "jpeg", "JPEG", "gif", "GIF", "png", "PNG"), $this->user->user_id);
+
+            # notify of error 
+            if($avatar == 'Invalid file type.') {
+                Router::redirect("/users/avatarError");
+                        }
+            else {
+                # add to DB                
+                $data = Array("avatar" => $avatar);
+                DB::instance(DB_NAME)->update("users", $data, "WHERE user_id = ".$this->user->user_id);
+
+                # resize the avatar and save again
+                $imgObj = new Image($_SERVER["DOCUMENT_ROOT"].'/assets/img/avatars/'.$avatar);
+                $imgObj->resize(100,100,"crop");
+                $imgObj->save_image($_SERVER["DOCUMENT_ROOT"].'/assets/img/avatars/'.$avatar);
+            }
+        }
+        else
+        {
+                # if there is an error let it be known
+                Router::redirect("/users/avatarError"); 
+        }
+        # send user back to profile
+        Router::redirect("/users/profile");
+    }
+
+    # page to notify user of avatar upload image
+    public function avatarError(){
+        # setup view & title
+        $this->template->content = View::instance('v_users_avatarError');
+        $this->template->title = 'Whoopsies!';
+
+        # render view
+        echo $this->template;
+
     }
 
 } # end of the class

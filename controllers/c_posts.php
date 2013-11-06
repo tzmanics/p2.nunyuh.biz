@@ -54,7 +54,8 @@ class posts_controller extends base_controller {
 					posts.user_id AS post_user_id,
 					users_users.user_id AS follower_id,
 					users.first_name,
-					users.last_name
+					users.last_name,
+					users.avatar
 				FROM posts
 				INNER JOIN users_users
 					ON posts.user_id = users_users.user_id_followed
@@ -80,6 +81,8 @@ class posts_controller extends base_controller {
 			# get users followed store array in $connections 
 			$connections = DB::instance(DB_NAME)->select_array($q, 'user_id_followed');
 
+
+	        # pass the data to the view
 			$this->template->content->users = $users;
 		    $this->template->content->connections = $connections;
 
@@ -150,7 +153,7 @@ class posts_controller extends base_controller {
         # pass the data to the view
         $this->template->content->user_name = $user_name;
 
-        # SQL query
+        # SQL query of posts info
         $q = "SELECT 
                 posts.content,
                 posts.created,
@@ -165,9 +168,10 @@ class posts_controller extends base_controller {
         # pass data to view
         $this->template->content->posts = $posts;
 
+        # display view
         echo $this->template;
     }
-    
+
 	public function deletePost($delete_post_id){
 		# delete the post
 		$deletePost = 'WHERE post_id = '.$delete_post_id;
