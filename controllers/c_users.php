@@ -6,7 +6,6 @@ class users_controller extends base_controller {
     } 
 
     public function index() {
-        echo "This is the index page";
     }
 
     public function signup() {
@@ -66,7 +65,7 @@ class users_controller extends base_controller {
         if($token) {
 
             setcookie('token', $token, strtotime('+2 weeks'), '/');
-            Router::redirect("/users/profile/");
+            Router::redirect("/index");
         }
 
         # fail: send back to login page
@@ -108,25 +107,6 @@ class users_controller extends base_controller {
         # disaply view
         
 
-        #shorter  / DRY
-        # $content = View::instnace('v_users_profile');
-        # $content->user_name = $user_name;
-        # $this->template-> = $content;
-
-        # SQL query
-        $q = "SELECT 
-                posts.content,
-                posts.created,
-                posts.post_id,
-                posts.user_id
-            FROM posts
-            WHERE user_id = ".$this->user->user_id;
-
-        # run query
-        $posts = DB::instance(DB_NAME)->select_rows($q);
-
-        # pass data to view
-        $this->template->content->posts = $posts;
 
         echo $this->template;
     }

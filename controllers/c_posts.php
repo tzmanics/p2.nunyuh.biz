@@ -140,6 +140,34 @@ class posts_controller extends base_controller {
 		Router::redirect("/posts");
 	}
 
+
+	public function myPosts(){
+
+        # setup view
+        $this->template->content = View::instance('v_posts_myPosts');
+        $this->template->title = $this->user->first_name."'s Posts";
+
+        # pass the data to the view
+        $this->template->content->user_name = $user_name;
+
+        # SQL query
+        $q = "SELECT 
+                posts.content,
+                posts.created,
+                posts.post_id,
+                posts.user_id
+            FROM posts
+            WHERE user_id = ".$this->user->user_id;
+
+        # run query
+        $posts = DB::instance(DB_NAME)->select_rows($q);
+
+        # pass data to view
+        $this->template->content->posts = $posts;
+
+        echo $this->template;
+    }
+    
 	public function deletePost($delete_post_id){
 		# delete the post
 		$deletePost = 'WHERE post_id = '.$delete_post_id;

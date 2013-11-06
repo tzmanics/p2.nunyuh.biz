@@ -77,15 +77,16 @@ nav {
       font-size: 1.05em;
       margin: 19px 2px 0 15px; }
 
+form {
+  margin: 0;
+  font-size: .75em; }
+  form h1 {
+    margin-bottom: 0; }
+
 .content {
   margin-top: 20px; }
   .content a {
     color: #7590D9; }
-
-.userAvatar {
-  width: 100px;
-  height: 100px;
-  overflow: hidden; }
 
 .userMenu {
   float: right;
@@ -110,11 +111,6 @@ nav {
 #welcome {
   margin: 0 auto;
   padding: 10px; }
-
-form {
-  margin: 20px 0 0 10px; }
-  form h1 {
-    margin-bottom: 0; }
 
 input {
   border-radius: 10px; }
