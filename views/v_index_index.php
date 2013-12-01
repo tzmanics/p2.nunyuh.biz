@@ -13,7 +13,7 @@
 	<?php foreach($posts as $post): ?>
 
 		<article>
-			<?= "<img src='/assets/img/avatars/".$post['avatar']."'>"; ?>
+			<?= "<img src='/assets/img/avatars/".$post['avatar']."' alt='user profile picture'>"; ?>
 			<h2><?=$post['first_name']?> <?=$post['last_name']?> posted:</h2>
 			<time datetime="<?=Time::display($post['created'],'d M y G:i')?>">
 				<?=Time::display($post['created'])?>

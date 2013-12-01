@@ -4,3 +4,5 @@
 	<br><br>
 	<input type = 'Submit' value = 'POST'>
 </form>
+<BR>
+<div id='results'></div>

@@ -1,6 +1,6 @@
+<!DOCTYPE html>
 <!-- Main Template Page: header/nav, links to content files -->
 
-<!DOCTYPE html>
 <html>
 <head>
 	<title><?php if(isset($title)) echo $title; ?></title>
@@ -19,7 +19,7 @@
 		<ul>
 			<!-- regular navigation + user menu nav-->
 			<li><?php if($user) {echo "<li class='userMenu'><a href='#'>
-					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png'></a>
+					<img src='https://dl.dropboxusercontent.com/u/3061181/dropdownArrow.png' alt='user menu arrow'></a>
 					<ul><li><a href='/users/profile'>PROFILE</a></li>
 					<li><a href='/posts/myPosts'>MY POSTS</a></li>
 					<li><a href='/users/logout'>LOG OUT</a></li>
