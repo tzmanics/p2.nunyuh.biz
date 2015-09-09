@@ -1,58 +1,84 @@
 @import url(http://fonts.googleapis.com/css?family=Oxygen:400,300,700|Share+Tech+Mono);
 /* Eric Meyer's Reset CSS v2.0 - http://cssreset.com */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i,
+center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption,
+tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section,
+summary, time, mark, audio, video {
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
   margin: 0;
-  padding: 0; }
+  padding: 0; 
+}
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+  display: block; 
+}
 
 body {
-  line-height: 1; }
+  line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+  list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+  quotes: none;
+}
 
 blockquote:before, blockquote:after, q:before, q:after {
-  content: none; }
+  content: none;
+}
 
 table {
   border-collapse: collapse;
-  border-spacing: 0; }
+  border-spacing: 0;
+}
 
 /*     TAGS     */
 a {
   text-decoration: none;
-  color: #666666; }
-  a:hover {
-    font-weight: bold; }
+  color: #666666;
+}
+
+a:hover {
+  font-weight: bold;
+}
 
 article {
   width: 98.5%;
   margin: 20px 0;
   padding: 5px;
   background-color: rgba(230, 84, 60, 0.05);
-  float: left; }
-  article img {
-    width: 50px;
-    height: 50px;
-    float: left;
-    margin-right: 8px; }
-  article h2 {
-    font-weight: 500;
-    margin: 10px 0 0 10px; }
-  article time {
-    font-size: 9pt;
-    font-weight: bold; }
-  article a {
-    color: #7590D9; }
+  float: left; 
+}
+
+article img {
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin-right: 8px;
+}
+
+article h2 {
+  font-weight: 500;
+  margin: 10px 0 0 10px;
+}
+
+article time {
+  font-size: 9pt;
+  font-weight: bold;
+}
+
+article a {
+  color: #7590D9;
+}
 
 body {
   width: 70%;
@@ -60,89 +86,117 @@ body {
   margin: 0 auto;
   font-family: 'Oxygen', serif;
   font-weight: 100;
-  color: #666666; }
+  color: #666666;
+}
 
 form {
   margin: 0;
-  font-size: .75em; }
-  form h1 {
-    margin-bottom: 0; }
+  font-size: .75em;
+}
+
+form h1 {
+  margin-bottom: 0;
+}
 
 h1 {
   font-weight: 500;
   font-size: 1.5em;
   margin: 10px 0;
-  font-family: 'Share Tech Mono', serif; }
+  font-family: 'Share Tech Mono', serif;
+}
 
 h2 {
   margin-bottom: 5px;
-  font-size: 1.25em; }
+  font-size: 1.25em;
+}
 
 h3 {
-  font-size: .65em; }
+  font-size: .65em;
+}
 
 header {
   height: 40px;
   margin-top: 10px;
-  border-bottom: 1px solid #CFCFCF; }
+  border-bottom: 1px solid #CFCFCF;
+}
 
 input {
-  border-radius: 10px; }
+  border-radius: 10px;
+}
 
 nav {
-  margin: 0; }
-  nav h1 {
-    font-size: 2.25em;
-    float: left;
-    margin-top: 2px; }
-  nav ul {
-    height: 30px;
-    list-style: none; }
-    nav ul li {
-      float: right;
-      font-size: 1.05em;
-      margin: 19px 2px 0 15px; }
+  margin: 0;
+}
+
+nav h1 {
+  font-size: 2.25em;
+  float: left;
+  margin-top: 2px;
+}
+
+nav ul {
+  height: 30px;
+  list-style: none;
+}
+
+nav ul li {
+  float: right;
+  font-size: 1.05em;
+  margin: 19px 2px 0 15px;
+}
 
 p {
   margin: 8px;
-  line-height: 1.5em; }
+  line-height: 1.5em;
+}
 
 textarea {
   width: 50%;
   height: 200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
 /*     CLASSES     */
 .content {
-  margin-top: 20px; }
-  .content a {
-    color: #7590D9; }
+  margin-top: 20px;
+}
+
+.content a {
+  color: #7590D9;
+}
 
 .userMenu {
   float: right;
   height: 22px;
   width: 15px;
   margin: 20px 0 0 0;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 .showMenu {
   height: 70px;
   width: 90px;
   margin: 23px 0 0 0;
   background-color: white;
-  font-size: .9em; }
-  .showMenu ul {
-    margin: 0;
-    padding: 0; }
-  .showMenu li {
-    margin: 0 3px 5px 0;
-    padding: 0; }
+  font-size: .9em;
+}
+
+.showMenu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.showMenu li {
+  margin: 0 3px 5px 0;
+  padding: 0;
+}
 
 /*     IDS     */
 #error {
   color: red;
   line-height: 1.5em;
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 #following {
   width: 45%;
@@ -150,12 +204,15 @@ textarea {
   background-color: white;
   border: 1px solid #CFCFCF;
   margin-bottom: 20px;
-  padding: 10px; }
-  #following h1 {
-    padding: 0 10px 10px 10px;
-    font-weight: 500;
-    text-align: right;
-    border-bottom: 1px solid #CFCFCF; }
+  padding: 10px;
+}
+
+#following h1 {
+  padding: 0 10px 10px 10px;
+  font-weight: 500;
+  text-align: right;
+  border-bottom: 1px solid #CFCFCF;
+}
 
 #notFollowing {
   width: 45%;
@@ -163,21 +220,30 @@ textarea {
   background-color: white;
   border: 1px solid #CFCFCF;
   margin-bottom: 20px;
-  padding: 10px; }
-  #notFollowing h1 {
-    padding: 0 10px 10px 10px;
-    font-weight: 500;
-    text-align: left;
-    border-bottom: 1px solid #CFCFCF; }
+  padding: 10px;
+}
+
+#notFollowing h1 {
+  padding: 0 10px 10px 10px;
+  font-weight: 500;
+  text-align: left;
+  border-bottom: 1px solid #CFCFCF;
+}
 
 #usersPosts {
   border: 1px solid #CFCFCF;
-  margin-top: 20px; }
-  #usersPosts h1 {
-    padding: 0 10px 10px 10px;
-    font-weight: 500;
-    text-align: right;
-    border-bottom: 1px solid #CFCFCF; }
-  #usersPosts h2 {
-    padding: 0 10px 10px 10px;
-    text-align: right; }
+  margin-top: 20px;
+}
+
+#usersPosts h1 {
+  padding: 0 10px 10px 10px;
+  font-weight: 500;
+  text-align: right;
+  border-bottom: 1px solid #CFCFCF;
+}
+
+#usersPosts h2 {
+  padding: 0 10px 10px 10px;
+  text-align: right;
+}
+
